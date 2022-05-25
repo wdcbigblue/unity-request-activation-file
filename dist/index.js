@@ -169,7 +169,7 @@ const Docker = {
         --volume "/var/run/docker.sock":"/var/run/docker.sock" \
         --volume "${process.env.HOME}/home/runner/work/_temp/_github_home":"/github/home" \
         --volume "${process.env.HOME}/home/runner/work/_temp/_github_workflow":"/github/workflow" \
-        --volume "${workspace}":"/github/workspace" \
+        --volume "${process.env.HOME}/${workspace}":"/github/workspace" \
         ${image}`;
             yield (0, exec_1.exec)(command, undefined, { silent });
         });
