@@ -167,8 +167,8 @@ const Docker = {
         --env RUNNER_TEMP \
         --env RUNNER_WORKSPACE \
         --volume "/var/run/docker.sock":"/var/run/docker.sock" \
-        --volume "/home/runner/work/_temp/_github_home":"/github/home" \
-        --volume "/home/runner/work/_temp/_github_workflow":"/github/workflow" \
+        --volume "~/home/runner/work/_temp/_github_home":"/github/home" \
+        --volume "~/home/runner/work/_temp/_github_workflow":"/github/workflow" \
         --volume "${workspace}":"/github/workspace" \
         ${image}`;
             yield (0, exec_1.exec)(command, undefined, { silent });
