@@ -1,6 +1,8 @@
 ARG IMAGE
 FROM $IMAGE
 
+WORKDIR ./
+
 LABEL "com.github.actions.name"="Unity - Request Activation File"
 LABEL "com.github.actions.description"="Request the manual activation file for activating Unity personal"
 LABEL "com.github.actions.icon"="box"
